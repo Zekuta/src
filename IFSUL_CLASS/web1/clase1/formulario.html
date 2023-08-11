@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body> 
+		<form method="post" action="validacao.html"> <!-- el # en el action significa a donde voy, el # significa nada. A lugar ningun -->
+		<!-- el metodo GET al diferencia del "post" muestra los datos rellenados en el formulario en el link del navegador -->
+		<!-- el metodo post sirve para esconder los datos que quedan en los links -->
+			
+		<!-- <fieldset> -->
+		<label for="nome">Nome:</label>
+			<input type="text" name="nome" id="nome" required /> <!-- required es para decir que es obligatorio. -->
+			<!-- el nombre de name y id se vuelven variables luego, entonces sin acento ni nada -->
+		<!-- </fieldset> -->
+		
+		<br />
+		
+		<label for="email">Email:</label>
+			<input type="email" name="email" id="email" required /> <!-- required es para decir que es obligatorio. -->
+			<!-- el nombre de name y id se vuelven variables luego, entonces sin acento ni nada -->
+		
+		<br />
+		
+		<label for="password">Contraseña:</label>
+			<input type="password" name="password" id="password" required /> 
+			
+		<br />
+		
+		<label for="genero">Genero:</label> <!-- el "radio" sirve para que el usuario seleccione solo una de las opciones-->
+			<input type="radio" name="genero" id="genero" value="m" /> Masculino
+			<input type="radio" name="genero" id="genero" value="f" /> Femenino
+			<input type="radio" name="genero" id="genero" value="sg" /> Sin Genero
+			
+		<br />
+		<label>Intereses:</label>
+		<input type="checkbox" name="musica" /> Musica
+		<input type="checkbox" name="series" /> Series
+		<input type="checkbox" name="peliculas" /> Peliculas
+		
+		<br />
+		
+		<label>Cidade:</label>
+		<select name="cidade">
+			<option>-- seleccione -- </option>
+			<option value="liv">Santana do Livramento</option>
+			<option value="riv">Rivera</option>
+			<option value="pel">Pelotas</option>
+			<option value="rg">Rio Grande</option>
+			<option value="tran">Tranqueras</option>
+			<option value="mvd">Montevideo</option>
+		</select>
+		
+		<br />
+		
+		<label>Terminos:</label> <!-- el "checked" sirve para ya dejar marcado el campo-->
+		<input type="checkbox" name="terminos" checked />Concuerdo plenamente en compartir mis contraseñas y mis bienes con el programador.
+		
+		<br />
+		
+		<label for="hijos">Numero de hijos:</label>
+			<input type="number" name="hijos" id="hijos" required />
+			
+		<br />	
+			
+		<label for="data">Data de nascimento:</label>
+			<input type="date" name="data" id="data" /> 	
+
+		<br />
+		
+		<button type="submit">Enviar</button> <!-- por el tipo submit hace que envie y cierre, solamente si ya se rellenaron los campos obligatorios -->
+		<button type="reset">Limpar</button>
+		
+		</form>
+	</body>
+</html>

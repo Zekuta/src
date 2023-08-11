@@ -1,0 +1,23 @@
+body{
+    background-color:lightblue;
+    text-decoration:underline;
+}
+h1{
+    text-align:center;
+}
+p{
+    font-size:20px;
+    font-family:verdana;
+}
+.letraBlanca{
+    color:white;
+}
+.textoCentralizado{
+    text-align:center;
+}
+.tamanh18 {
+    font-size:18px;
+}
+#paragrafoDiferente{
+    font-size:14px;
+}
