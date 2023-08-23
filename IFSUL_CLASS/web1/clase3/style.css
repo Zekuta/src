@@ -1,0 +1,59 @@
+body { 
+    /* background-color: cyan;
+    background-image:url(rem-rezero.gif);
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position: center; */
+
+    background: cyan url(rem-rezero.gif) no-repeat center fixed; /* Este equivale a las 5 lineas de background de arriba.  */
+
+    font-family: Helvetica, 'Comic Sans MS', sans-serif;
+    color:white;
+    /*
+    la siguiente fuente seguida por la coma, lo que hace es que si no tenes la fuente Helvetica en tu computadora, elige sans-serif.
+    Se escribe 'Comic Sans MS' entre comillas simples, ya que es una palabra compuesta, osea, que no es como sans-serif que es todo seguido.
+    */
+}
+
+a {
+    color:white;
+    text-decoration:none; /* Para quitar el sublineado */
+}
+
+a:link {
+    color: white;
+}
+a:hover { /* Sirve para cada vez que pasamos el mouse por arriba del link, ejecuta el codigo de dentro. */
+    text-decoration:underline;
+}
+a:visited {
+    color: rebeccapurple;
+}
+
+div {
+    border: 2px solid;
+    border-color: red;
+    width: 30px;
+    height: 30px;
+}
+
+img { 
+    width: inherit; /* Sirve para heredar los valores de el atributo padre, donde esta alojado <img> */
+    height: inherit; /* Sirve para heredar los valores de el atributo padre, donde esta alojado <img> */
+}
+
+/* h3 {border: 10px solid rgba(255,99,71, 0.5);} El rgba, en la cuarta columnMAIN_PAGEa, maneja la opacidad de el color */
+h3 {
+    text-align: center;
+    text-decoration: underline; /* Para poner underline al texto */
+    text-transform: capitalize;
+
+    border-style:solid;
+    border-width:10px 5px 20px;
+    border-color:darkgreen;
+    background-color: brown;
+    margin: 0 20px; /* Se mueve 20 pixels, encima, a la derecha, abajo y a la iquierda. */
+    padding: 15px 50px 15px 50px; /* Se separa 50px desde el contenido de adentro de h3 */
+    /* width:1000px; Tamanho fijo para la largura de el borde de h3
+    height: 25px; Tamanho fijo para la altura de el borde de h3 */
+}

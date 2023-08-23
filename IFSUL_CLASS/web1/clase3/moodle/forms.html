@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <link rel="stylesheet" href="style.css">
+        <title>StudIFsul</title>
+    </head>
+    <body>
+
+        <hr>
+            <h2 class="CENTER">Formulario de inscripción de alumno</h2>
+        <hr>
+        <table border="3">
+            <thead>
+                <th colspan="4">breadcrums</th>
+            </thead>
+            <tbody>
+                <tr class="CENTER">
+                    <td><a href="main_page.html">Home</a></td>
+                    <td><a href="tables.html">Tables</a></td></td>
+                    <td><a href="photos.html">Photos</a></td>
+                    <td><a href="videos.html">Videos</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+
+        <form method="post" action="validacao.html">
+
+            <!-- LABEL Nombre de Alumno -->
+            <label for="name">Nombre: </label>
+                <!-- TEXTBOX de Nombre de Alumno | OBLIGATORIO -->
+                <input type="text" name="name" id="name" required />
+
+            <!-- <br />  -->
+
+            <!-- LABEL Apellido de Alumno -->
+            <label for="surname">Apellido: </label>
+                <!-- TEXTBOX de Apellido de Alumno | OBLIGATORIO -->
+                <input type="text" name="surname" id="surname" required />
+
+            <br />
+
+            <!-- LABEL Genero de Alumno -->
+            <label for="genero">Genero: </label>
+                <!-- RADIO de Genero de Alumno | OBLIGATORIO -->
+                <input type="radio" name="genre" id="genre" value="m" required /> Masculino
+                <input type="radio" name="genre" id="genre" value="f" required /> Femenino
+                <input type="radio" name="genre" id="genre" value="o" required /> Otro
+
+            <br />
+
+            <!-- LABEL Email de Alumno -->
+            <label for="email">Email: </label>
+                <!-- TEXTBOX de Email de Alumno | OBLIGATORIO -->
+                <input type="email" name="email" id="email" required />
+
+            <br />
+
+            <!-- LABEL de Ciudad de Alumno -->
+            <label>Ciudad: </label>
+            <!-- SELECCION de Ciudad -->
+            <select name="city">
+                <!-- SCROLL SELECT de Alumno | OBLIGATORIO -->
+                <option> -- seleccione -- </option>
+                <option value="riv">Rivera</option>
+                <option value="liv">Santana do Livramento</option>
+                <option value="mvd">Montevideo</option>
+                <option value="pta">Porto Alegre</option>
+                <option value="pel">Pelotas</option>
+                <option value="art">Artigas</option>
+                <option value="rg">Rio Grande</option>
+                <option value="tbo">Tacuarembó</option>
+            </select>
+
+            <br />
+
+            <!-- LABEL de Direccion de Alumno -->
+            <label for="address">Dirección: </label>
+            <!-- TEXTBOX de Direccion de Alumno | OBLIGATORIO -->
+                <input type="text" name="address" id="address" required>
+
+            <!-- LABEL de Numero de hogar de Alumno -->
+            <label for="address_number">Numero: </label>
+            <!-- TEXTBOX de Numero de hogar de Alumno | OBLIGATORIO -->
+                <input type="number" name="address_number" id="address_number" required>
+
+            <!-- LABEL de Numero de bloque de apartamento de Alumno -->
+            <label for="address_APTO">Apartamento: </label>
+            <!-- TEXTBOX de Numero de bloque de apartamento de Alumno -->
+                <input type="text" name="address_APTO" id="address_APTO">
+
+            <br />
+
+            <!-- LABEL de Numero de celular de Alumno -->
+            <label for="cel_number">Tel celular: </label>
+                <!-- TEXTBOX de Numero de celular de Alumno | OBLIGATORIO -->
+                <input type="tel" name="cel_number" id="cel_number" required>
+            
+            <!-- <br /> -->
+
+            <label for="tel_number">Telefono: </label>
+                <!-- TEXTBOX de Numero de telefono de Alumno -->
+                <input type="tel" name="tel_number" id="tel_number">
+                
+            <br />
+
+            <label for="birthdate">Fecha de Nascimiento: </label>
+			<input type="date" name="birthdate" id="birthdate" />
+
+            <br />
+
+            <!-- LABEL de Cédula de Identidad de Alumno -->
+            <label for="ci">C.I.: </label>
+                <!-- TEXTBOX de Cédula de Identidad de Alumno | OBLIGATORIO -->
+                <input type="number" name="ci" id="ci">
+
+            <!-- LABEL de CPF de Alumno -->
+            <label for="cpf">CPF: </label>
+                <!-- TEXTBOX de CPF de Alumno | OBLIGATORIO -->
+                <input type="number" name="cpf" id="cpf">
+
+            <br />
+            
+            <label for="profile_picture">Inserte foto de Perfil: </label>
+            <input type="image" src="img_submit.gif" alt="Submit" width="50" height="50">
+
+            <br />
+
+            <label for="studyCertificate_picture">Inserte certificado de conclusión de estudios: </label>
+            <input type="image" src="img_submit.gif" alt="Submit" width="50" height="50">
+
+            <br />
+
+            <label>Terminos: </label>
+		        <input type="checkbox" name="terms" checked required/>Aceptar los <a href="terminos.html">Términos y Condiciones</a>
+
+            <br />
+
+            <button type="submit">Enviar</button>
+        </form>
+    </body>
+</html>
