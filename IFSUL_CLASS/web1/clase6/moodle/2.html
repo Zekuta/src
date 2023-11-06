@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body align="center">
+    <h1>Treinador de Futebol</h1>
+    Jogador: <input type="text" id="jogadorInput">
+    <br><br>
+    <button id="goleiro">Goleiro</button>
+    <button id="fixo">Fixo</button>
+    <button id="alaEsquerda">Ala Esquerda</button>
+    <button id="alaDireita">Ala Direita</button>
+    <button id="pivo">Pivô</button>
+
+    <table border="1" style="width:800px; background-color:lightgreen; height:400px; text-align:center" align="center">
+        <thead>
+            <th colspan="4">Seleção</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="4" id="tdGoleiro">
+                    <p>Goleiro</p>
+                    <p></p>
+                </td>
+            </tr>
+            <tr>
+                <td id="tdAlaEsquerda">
+                    <p>Ala Esquerda</p>
+                    <p></p>
+                </td>
+                <td id="tdFixo">
+                    <p>Fixo</p>
+                    <p></p>
+                </td>
+            </tr>
+            <tr>
+                <td id="tdPivo">
+                    <p>Pivô</p>
+                    <p></p>
+                </td>
+                <td id="tdAlaDireita">
+                    <p>Ala Direita</p>
+                    <p></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    Regras: Pegar o nome informado pelo usuário no input Jogador e posicioná-lo na posição indicada pelo botão.
+
+    <script type="text/javascript">
+        const jogadorInput = document.getElementById('jogadorInput');
+        const goleiroButton = document.getElementById('goleiro');
+        const fixoButton = document.getElementById('fixo');
+        const alaEsquerdaButton = document.getElementById('alaEsquerda');
+        const alaDireitaButton = document.getElementById('alaDireita');
+        const pivoButton = document.getElementById('pivo');
+
+        goleiroButton.addEventListener('click', function() {
+            document.querySelector('#tdGoleiro p:last-child').textContent = jogadorInput.value;
+        });
+
+        fixoButton.addEventListener('click', function() {
+            document.querySelector('#tdFixo p:last-child').textContent = jogadorInput.value;
+        });
+
+        alaEsquerdaButton.addEventListener('click', function() {
+            document.querySelector('#tdAlaEsquerda p:last-child').textContent = jogadorInput.value;
+        });
+
+        alaDireitaButton.addEventListener('click', function() {
+            document.querySelector('#tdAlaDireita p:last-child').textContent = jogadorInput.value;
+        });
+
+        pivoButton.addEventListener('click', function() {
+            document.querySelector('#tdPivo p:last-child').textContent = jogadorInput.value;
+        });
+    </script>
+</body>
+</html>

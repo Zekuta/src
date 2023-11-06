@@ -1,0 +1,44 @@
+
+body {
+    margin: 0;
+    background-color: #D90000;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.high-contrast {
+    background-color: black;
+    color: white;
+}
+
+#fonte {
+    text-align: right;
+}
+
+#cor {
+    text-align: right;
+}
+
+#tudo {
+    margin: 0 auto;
+    width: 800px;
+}
+
+#menu {
+    width: 200px;
+    float: left;
+}
+
+#centro {
+    width: 600px;
+    float: right;
+}
+
+h1 {
+    text-align: center;
+    color: #FFC200;
+}
+
+span {
+    cursor: pointer;
+}

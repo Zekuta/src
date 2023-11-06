@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <title>Atividade7</title>
+    </head>
+    <body>
+
+        <h2>EJERCICIO 1: </h2>
+
+
+            <label for="birthday">Fecha de Cumpleaños:</label>
+            <input type="date" id="birthday" name="birthday">
+
+            <br /><br />
+            <button onclick="calcDaysToBirthday()">Calcular</button>
+            <br /><br />
+
+            <div class="DaysToBirthday">
+                
+            </div>
+
+        <script>
+            // Function to calculate the remaining days
+            function calcDaysToBirthday() {
+                // Get the input field for the birthday date
+                var birthdayInput = document.getElementById("birthday");
+                // Create a Date object using the selected date and set the time to noon
+                var birthdayDate = new Date(birthdayInput.value + "T12:00:00");
+            
+                if (birthdayDate) {
+                // Get the current date and set the time to noon
+                var currentDate = new Date();
+                currentDate.setHours(12, 0, 0, 0);
+            
+                // If the birthday date has already passed this year, set it to next year
+                if (birthdayDate < currentDate) {
+                    birthdayDate.setFullYear(currentDate.getFullYear() + 1);
+                }
+            
+                // Calculate the time difference between the two dates in milliseconds
+                var difference = birthdayDate - currentDate;
+            
+                // Calculate the number of days remaining by dividing the time difference by the number of milliseconds in a day
+                var daysRemaining = Math.floor(difference / (1000 * 60 * 60 * 24));
+            
+                // Get a reference to the <div> element where the result will be displayed
+                var resultDiv = document.querySelector(".DaysToBirthday");
+            
+                // Display the result in the <div>
+                resultDiv.textContent = "Days remaining until your birthday: " + daysRemaining;
+                }
+            }
+          </script>
+
+
+          <h2>EJERCICIO 2: </h2>
+
+                <label for="numberPower">Numero elevado: </label>
+                <input type="number" id="numberPower" name="numberPower">
+
+                <br /><br />
+
+                <label for="power">Potencia: </label>
+                <input type="number" id="power" name="power">
+
+                <br /><br />
+                <button onclick="calculateNumberToPower()">Calcular</button>
+                <br /><br />
+
+                <div class="NumberToPower">
+                    
+                </div>
+
+            <script>
+                function calculateNumberToPower() {
+                    var numberInput = document.getElementById("numberPower");
+                    var powerInput = document.getElementById("power");
+                    var resultDiv = document.querySelector(".NumberToPower");
+              
+                    var number = parseFloat(numberInput.value);
+                    var power = parseInt(powerInput.value);
+              
+                    if (!isNaN(number) && !isNaN(power)) {
+                      var result = Math.pow(number, power);
+                      resultDiv.textContent = "Resultado: " + result;
+                    } else {
+                      resultDiv.textContent = "Ingrese solamente números válidos.";
+                    }
+                  }
+            </script>
+
+
+            <h2>EJERCICIO 3: </h2>
+
+            <p>Contenido del array: "Teste", "Passe", "Leite", "Café", "HTML", "JAVA", "JS", "CSS", "Casa"</p>
+
+            <label for="searchInput">Enter a string to search:</label>
+            <input type="text" id="searchInput">
+
+            <br /><br />
+            <button onclick="searchArray()">Buscar</button>
+            <br /><br />
+
+            <div class="searchArray">
+
+            </div>
+
+            <script>
+                // Array of strings
+                var array = ["Teste", "Passe", "Leite", "Café", "HTML", "JAVA", "JS", "CSS", "Casa"];
+            
+                function searchArray() {
+                  var searchInput = document.getElementById("searchInput");
+                  var searchTerm = searchInput.value.trim().toLowerCase();
+            
+                  var resultDiv = document.querySelector(".searchArray");
+            
+                  if (searchTerm === "") {
+                    resultDiv.textContent = "Ingrese una String válida.";
+                    return;
+                  }
+            
+                  var results = array.filter(function(item) {
+                    return item.toLowerCase().includes(searchTerm);
+                  });
+            
+                  if (results.length > 0) {
+                    resultDiv.textContent = "Resultados encontrados: " + results.join(", ");
+                  } else {
+                    resultDiv.textContent = "[Error 404] - No results found.";
+                  }
+                }
+            </script>
+
+
+            
+    </body>
+</html>

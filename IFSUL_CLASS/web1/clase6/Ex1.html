@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            p {
+                text-align: center;
+                background: rgba(0,0,200,0.3);
+                color: rgba(0,0,200,0.6);
+                border-radius: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Aula de JS</p>
+        <button id="btnUNO">Download</button>
+
+        <script type="text/javascript"> //src="nome.js" poner archivo externo de js.    defer hace que solo cargue el archivo externo luego de que toda la pagina sea cargada
+            // | src="nome.js" defer |
+
+            document.querySelector('#btnUNO').onclick = function() {
+                alert("Seu download sera iniciado em instantes");
+            }
+
+            const paragrafo = document.querySelector("p"); //document es un objeto, que representa una cosa que quiero accesar
+            //agarra el objeto para cambiar, el elemento html, el CSS. No el contenido, no el texto del paragrafo
+            //document.querySelector("#para1"); ejemplo para referirnos a un paragrafo en especifico, especificando el id="para1" en el paragrafo
+            //se pone el script al final de crear las cosas, ya que dependiendo del navegador no funcione, ya que no se creo el CSS aun de ese paragrafo
+
+            paragrafo.addEventListener("click", trocaNome);
+
+            function trocaNome() {
+                var nome = prompt("Insira seu nome: "); //buena para hacer tests
+                paragrafo.textContent = "Ola, " + nome;
+            }
+
+            //async para elegir si queremos que alguna cosa sea cargada antes
+
+            //JQUERY
+            //let es una variable global, y var es una variable local
+
+            //innerHTML realiza una insercion de html
+        </script>
+    </body>
+</html>

@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	</head>
+	<body>
+		<h2>Exercício 1</h2>
+		Crie eventos que exibam alerts confome a ação do botão: <br />
+		<button id="btnUm">Clique aqui</button>
+
+			<script type="text/javascript"> //src="nome.js" poner archivo externo de js.    defer hace que solo cargue el archivo externo luego de que toda la pagina sea cargada
+				// | src="nome.js" defer |
+				document.querySelector('#btnUm').onclick = function() {
+					alert("Click!");
+				}
+
+			</script>
+
+		<button id="btnDois">Passe o mouse aqui</button>
+
+			<script type="text/javascript">
+
+				document.querySelector('#btnDois').addEventListener('mouseover', function() {
+					alert("Mouse over!");
+				});			
+
+			</script>
+
+		<button id="btnTres">Passe e retire o mouse aqui</button>
+
+			<script type="text/javascript">
+
+				const boton = document.querySelector('#btnTres');
+
+				boton.addEventListener('mouseover', function() {
+					alert("Mouse sobre el botón!");
+				});
+				
+				boton.addEventListener('mouseout', function() {
+					alert("Mouse fuera del botón!");
+				});
+
+			</script>
+
+		<hr />		
+		
+		<h2>Exercício 2</h2>
+		Nome: <input type="text" id="inputExercicio2"/>
+		<button id="btnExercicio2">Enviar</button>
+		<p id="paragrafoExercicio2">Regra: Pegar o nome que o usuário e sobrescrever dentro desse paragráfo: Olá nomedigitado!</p>
+		<hr />
+
+			<script type="text/javascript">
+
+				//obtencion de datos
+				const inputExercicio2 = document.getElementById('inputExercicio2');
+				const paragrafoExercicio2 = document.getElementById('paragrafoExercicio2');
+				const btnExercicio2 = document.getElementById('btnExercicio2');
+
+				//click event
+				btnExercicio2.addEventListener('click', function () {
+					//get input value 
+					const nombre = inputExercicio2.value;
+					
+					//text modifier
+					paragrafoExercicio2.textContent = `Regra: Pegar o nome que o usuário e sobrescrever dentro desse paragráfo: Olá ${nombre}!`;
+				});
+
+
+			</script>
+
+		<h2>Exercício 3</h2>
+		Número: <input type="text" id="inputExercicio3"/>
+		<button id="btnExercicio3">Enviar</button>
+		<p id="paragrafoExercicio3">Regra: Pegar o número informado e apresentar seu antecessor até 1.</p>
+		<hr />
+
+			<script type="text/javascript">
+
+				const inputExercicio3 = document.getElementById('inputExercicio3');
+				const btnExercicio3 = document.getElementById('btnExercicio3');
+
+				//click event
+				btnExercicio3.addEventListener('click', function () {
+				//get and convert value
+				const numero = parseInt(inputExercicio3.value);
+
+				//horrible alert
+				for (let i = numero; i >= 1; i--) {
+						alert(i);
+					}
+				});
+
+			</script>
+
+		<h2>Exercício 4</h2>
+		<p id="paragrafoExercicio4">Regra: Altere o estilo desse paragráfo confome os botões</p>
+		<button id="exercicio4btn1">Troca cor da letra para Azul</button>
+		<button id="exercicio4btn2">Troca cor da letra para Vermelha</button>
+		<button id="exercicio4btn3">Troca cor do fundo para Preta</button>
+		<button id="exercicio4btn4">Troca cor do fundo para Cinza</button>
+		<button id="exercicio4btn5">Troca tamanho da fonte para 20</button>
+		
+		<script type="text/javascript">
+
+			const paragrafoExercicio4 = document.getElementById('paragrafoExercicio4');
+			const btn1 = document.getElementById('exercicio4btn1');
+			const btn2 = document.getElementById('exercicio4btn2');
+			const btn3 = document.getElementById('exercicio4btn3');
+			const btn4 = document.getElementById('exercicio4btn4');
+			const btn5 = document.getElementById('exercicio4btn5');
+
+			//EVENTS BUTTONS
+			btn1.addEventListener('click', function () {
+				paragrafoExercicio4.style.color = 'blue';
+			});
+
+			btn2.addEventListener('click', function () {
+				paragrafoExercicio4.style.color = 'red';
+			});
+
+			btn3.addEventListener('click', function () {
+				paragrafoExercicio4.style.backgroundColor = 'black';
+			});
+
+			btn4.addEventListener('click', function () {
+				paragrafoExercicio4.style.backgroundColor = 'gray';
+			});
+
+			btn5.addEventListener('click', function () {
+				paragrafoExercicio4.style.fontSize = '20px';
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,286 @@
+body {
+    background-color: #00416A;
+}
+a {
+    color: white;
+    text-decoration: none; /* Eliminar subrayado predeterminado de los enlaces */
+}
+
+/* SOCIALS */
+
+.socials {
+    float: right;
+}
+
+/* SOCIALS */
+
+
+/* MENU */
+
+.containerMENU {
+    display: flex;
+    align-items: center; /* Vertically center items */
+}
+.logo {
+    flex: 0 0 auto; /* Do not grow or shrink */
+}
+.menu {
+    flex: 1; /* Allow the menu to grow and take up remaining space */
+    text-align: center; /* Center the menu items horizontally */
+}
+/* Estilos para los enlaces en la lista */
+.linksMENU {
+    display: inline-block;
+    padding-bottom: 5px; /* Espacio para el borde debajo del enlace */
+    margin-right: 20px; /* Espacio entre los enlaces (opcional) */
+    color: #333; /* Color del texto */
+    position: relative; /* Agregar posición relativa para posicionar el borde */
+}
+
+/* Estilo para el borde inferior en estado normal */
+.linksMENU::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Altura del borde inferior */
+    background-color: #ccc; /* Color de borde por defecto */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+/* Cambiar el color del borde al pasar el mouse sobre un enlace */
+.linksMENU:hover::after {
+    background-color: gold; /* Cambiar el color del borde al pasar el cursor */
+}
+
+/* MENU */
+
+/* MAIN IMAGE */
+
+.mainIMAGE {
+    background-image: url('main-image.jpg');
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    /* Set container size and other styles */
+    width: 100%;
+    height: 45vh; /* Adjust the height as needed */
+    position: relative; /* Position the text relative to this container */
+}
+.title {
+    position: absolute; /* Position the text absolutely within the container */
+    width: 100%;
+    top: 7%; /* Vertically center the text */
+    left: 50%; /* Horizontally center the text */
+    transform: translate(-50%, -50%); /* Center the text perfectly */
+    text-align: center; /* Center-align text */
+    color: white; /* Text color */
+}
+
+/* MAIN IMAGE */
+
+
+/* LAST-GAME */
+
+.last-game {
+    display: flex;
+    align-items: center; /* Centrar verticalmente los elementos */
+    justify-content: center; /* Centrar horizontalmente los elementos */
+    height: 3vh; /* Ajusta la altura como desees */
+}
+.center-text {
+    text-align: center; /* Centrar el texto horizontalmente */
+    font-size: 24px; /* Ajusta el tamaño de fuente según tus preferencias */
+    font-weight: bold; /* Opcional: Puedes hacer que la "x" sea negrita */
+}
+.versus {
+    letter-spacing: 10px;
+    padding: 5px;
+    color: #012169;
+    font-size: 30px; /* Ajusta el tamaño de fuente según tus preferencias */
+    font-weight: bold; /* Opcional: Puedes hacer que la "x" sea negrita */
+}
+.leagueBLUE {
+    color: #012169;
+    font-size: 30px; /* Ajusta el tamaño de fuente según tus preferencias */
+    font-weight: bold; /* Opcional: Puedes hacer que la "x" sea negrita */
+}
+.highlight-x-leagueGOLD {
+    color: gold; /* Cambia el color de la "x" según tus preferencias */
+}
+
+/* LAST-GAME */
+
+
+/* BANNER */
+
+.center-banner {
+    display: grid;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    /* Ajusta el tamaño del contenedor según tus necesidades */
+    width: 100%;
+    height: 40vh; /* Esto es opcional, ajusta la altura según tus necesidades */
+}
+
+/* BANNER */
+
+
+/* SPONSORS */
+
+.sponsors {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    /* Ajusta el tamaño del contenedor según tus necesidades */
+    width: 100%;
+    height: 12vh; /* Esto es opcional, ajusta la altura según tus necesidades */
+    padding: 20px;
+}
+
+.sponsorsIMG {
+    padding: 20px;
+    width: 100px;
+}
+
+/* SPONSORS */
+
+
+/* NEXT-GAMES */
+
+.grid-nextgames {
+    background-color: gold;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    gap: 10px;
+}
+.grid-nextgamesEXTRA {
+    grid-row: 1/4;
+    grid-column: 4;
+    background-color: gold;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(30px, auto);
+    gap: 10px;
+}
+.nextgames-center {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.nextgame1 {
+    grid-row: 2;
+    grid-column: 2;
+}
+.nextgame2 {
+    grid-row: 1;
+    grid-column: 1/4;
+}
+.nextgame3 {
+    grid-row: 2;
+    grid-column: 1/4;
+}
+.nextgame4 {
+    grid-row: 3;
+    grid-column: 1/4;
+}
+
+
+/* NEXT-GAMES */
+
+
+/* NEWS */
+
+.news {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    gap: 20px;
+}
+
+.news-img {
+    width: 100px;
+    padding: 10px;
+}
+
+.newsDIV1{
+    background-color: gold;
+    grid-row: 1;
+    grid-column: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.newsDIV2{
+    background-color: gold;
+    grid-row: 1;
+    grid-column: 2;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.newsDIV3{
+    background-color: gold;
+    grid-row: 1;
+    grid-column: 3;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.newsDIV4{
+    background-color: gold;
+    grid-row: 1;
+    grid-column: 4;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.newsDIV5{
+    background-color: gold;
+    grid-row: 2;
+    grid-column: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.newsDIV6{
+    background-color: gold;
+    grid-row: 2;
+    grid-column: 2;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.newsDIV7{
+    background-color: gold;
+    grid-row: 2;
+    grid-column: 3;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.newsDIV8{
+    background-color: gold;
+    grid-row: 2;
+    grid-column: 4;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* NEWS */
+
+
+/* REFERENCES */
+
+.referenceTEXT {
+    color: black;
+    text-align: right;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* REFERENCES */

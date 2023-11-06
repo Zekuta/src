@@ -1,3 +1,4 @@
+package RMI_FUNCIONANDO;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 

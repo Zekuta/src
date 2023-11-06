@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        Nome: <input type="text" id="nomeUsuario"/>
+        <button id="btnUNO">Enviar</button>
+        <div id="area"></div>
+
+        <script type="text/javascript">
+            document.querySelector("#btnUNO").onclick = function() {
+                let nomeUsuario = document.querySelector("#nomeUsuario").value;
+                document.querySelector("#area").innerHTML = 
+                    "<p> Hola, " + nomeUsuario + ".</p>";
+
+                document.querySelector("#btnUNO").style.backgroundColor = "red";
+            }
+
+            for(let i=0;i<10;i++){
+                alert(i);
+            }
+
+        </script>
+    </body>
+</html>

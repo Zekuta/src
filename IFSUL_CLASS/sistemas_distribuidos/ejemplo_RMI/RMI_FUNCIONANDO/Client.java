@@ -1,3 +1,4 @@
+package RMI_FUNCIONANDO;
 import java.rmi.Naming;
 
 public class Client{
