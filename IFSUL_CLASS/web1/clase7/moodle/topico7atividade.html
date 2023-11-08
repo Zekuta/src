@@ -56,21 +56,21 @@
 
           <h2>EJERCICIO 2: </h2>
 
-                <label for="numberPower">Numero elevado: </label>
-                <input type="number" id="numberPower" name="numberPower">
+            <label for="numberPower">Numero elevado: </label>
+            <input type="number" id="numberPower" name="numberPower">
 
-                <br /><br />
+            <br /><br />
 
-                <label for="power">Potencia: </label>
-                <input type="number" id="power" name="power">
+            <label for="power">Potencia: </label>
+            <input type="number" id="power" name="power">
 
-                <br /><br />
-                <button onclick="calculateNumberToPower()">Calcular</button>
-                <br /><br />
+            <br /><br />
+            <button onclick="calculateNumberToPower()">Calcular</button>
+            <br /><br />
 
-                <div class="NumberToPower">
-                    
-                </div>
+            <div class="NumberToPower">
+                
+            </div>
 
             <script>
                 function calculateNumberToPower() {
@@ -134,6 +134,76 @@
             </script>
 
 
-            
+            <h2>EJERCICIO 4:</h2>
+
+            <p>Array actual: "Teste", "Passe", "Leite", "Café", "HTML", "JAVA", "JS", "CSS", "Casa"</p>
+
+            <label for="newItemUNSHIFT">Nuevo ítem:</label>
+            <input type="text" id="newItemUNSHIFT">
+
+            <br /><br />
+            <button onclick="insertItemAtBeginning()">Insertar</button>
+            <br /><br />
+
+            <div class="arrayContentUNSHIFT">
+
+            </div>
+
+            <script>
+                // Array de strings inicial
+                var arrayUNSHIFT = ["Teste", "Passe", "Leite", "Café", "HTML", "JAVA", "JS", "CSS", "Casa"];
+
+                function insertItemAtBeginning() {
+                  var newItemInput = document.getElementById("newItemUNSHIFT");
+                  var newItemUNSHIFT = newItemInput.value.trim();
+
+                  var arrayContentDiv = document.querySelector(".arrayContentUNSHIFT");
+
+                  if (newItemUNSHIFT === "") {
+                    arrayContentDiv.textContent = "Por favor, ingrese un nuevo ítem válido.";
+                    return;
+                  }
+
+                  arrayUNSHIFT.unshift(newItemUNSHIFT); // Insertar al principio del array
+
+                  arrayContentDiv.textContent = "Array actualizado: " + arrayUNSHIFT.join(", ");
+                }
+            </script>
+
+            <h2>EJERCICIO 5:</h2>
+
+            <p>Array actual: "Teste", "Passe", "Leite", "Café", "HTML", "JAVA", "JS", "CSS", "Casa"</p>
+
+            <label for="newItemPUSH">Nuevo ítem:</label>
+            <input type="text" id="newItemPUSH">
+
+            <br /><br />
+            <button onclick="insertItemAtEnd()">Insertar</button>
+            <br /><br />
+
+            <div class="arrayContentPUSH">
+
+            </div>
+
+            <script>
+                // Array de strings inicial
+                var arrayPUSH = ["Teste", "Passe", "Leite", "Café", "HTML", "JAVA", "JS", "CSS", "Casa"];
+
+                function insertItemAtEnd() {
+                  var newItemInput = document.getElementById("newItemPUSH");
+                  var newItemPUSH = newItemInput.value.trim();
+
+                  var arrayContentDiv = document.querySelector(".arrayContentPUSH");
+
+                  if (newItemPUSH === "") {
+                    arrayContentDiv.textContent = "Por favor, ingrese un nuevo ítem válido.";
+                    return;
+                  }
+
+                  arrayPUSH.push(newItemPUSH); // Insertar al final del array
+
+                  arrayContentDiv.textContent = "Array actualizado: " + arrayPUSH.join(", ");
+                }
+            </script>
     </body>
 </html>
