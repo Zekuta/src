@@ -1,4 +1,256 @@
 body {
-    background-image: url("background-1.jpg");
+    background-image: url("images/background-1.jpg");
     background-repeat: repeat;
+}
+button {
+    margin: 0 5px;
+}
+hr {
+    padding: 0;
+    margin: 0;
+}
+a {
+    color: white;
+    text-decoration: none; /* Eliminar subrayado predeterminado de los enlaces */
+}
+
+
+/* INICIO */
+.containerINICIO {
+    display: flex;
+    height: 69px;
+}
+    .containerLOGO {
+        justify-content: flex-start;
+    }
+        .imgLOGO {
+            text-align: left;
+            max-width: 69px;
+            max-height: 69px;
+        }
+
+    .containerTITLE {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+        flex-grow: 1; /* Permite que el título ocupe el espacio disponible y se centre horizontalmente */
+    }
+        .title {
+            color: white;
+        }
+        
+    .containerINTERFACE {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+        .imgBtnUSER {
+            max-width: 50px;
+            max-height: 50px;
+        }
+        .imgBtnMENU {
+            max-width: 50px;
+            max-height: 50px;
+        }
+
+
+.menu {
+    flex: 1; /* Allow the menu to grow and take up remaining space */
+    text-align: center; /* Center the menu items horizontally */
+}
+    ul.itemsMENU {
+        padding-inline-start: 0; /* Remove the inline-start padding for the specific list with class "my-list" */
+        margin: 7px;
+    }
+    /* Estilos para los enlaces en la lista */
+    .linksMENU {
+        display: inline-block;
+        padding-bottom: 5px; /* Espacio para el borde debajo del enlace */
+        margin-right: 20px; /* Espacio entre los enlaces (opcional) */
+        color: #333; /* Color del texto */
+        position: relative; /* Agregar posición relativa para posicionar el borde */
+    }
+    /* Estilo para el borde inferior en estado normal */
+    .linksMENU::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px; /* Altura del borde inferior */
+        background-color: #ccc; /* Color de borde por defecto */
+        transition: background-color 0.3s; /* Transición suave del color de fondo */
+    }
+    /* Cambiar el color del borde al pasar el mouse sobre un enlace */
+    .linksMENU:hover::after {
+        background-color: gold; /* Cambiar el color del borde al pasar el cursor */
+    }
+  
+    .containerINSTITUTES {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .columnINSTITUES {
+        margin-top: 18px; /* Adjust the margin-top value to your preference */
+        padding: 5px;
+    }
+    
+    figure {
+        border: thin gray solid;
+        display: flex;
+        flex-flow: column;
+        padding: 5px;
+        max-width:300px;
+        margin: auto;
+    } 
+    .imgINSTITUTES {
+        max-width: 300px;
+        max-height: 300px;
+    } 
+    figcaption {
+        background-color: black;
+        color: white;
+        font: italic smaller sans-serif;
+        padding: 3px;
+        text-align: center;
+    }
+
+    /* NEWS-MAINPAGE */
+
+    .hr-margin-top {
+        margin-top: 18px;
+    }
+    .hr-margin-bot {
+        margin-bottom: 18px;
+    }
+    .margin-paragraph {
+        margin: 10px;
+    }
+
+    .news-bannerTITLE {
+        background-color: darkgreen;
+        margin: 10px;
+        text-align: center;
+        font: bold;
+        color: white;
+        font-size: 20px;
+    }
+
+    .news-title {
+        background-color: green;
+        margin: 10px;
+        text-align: center;
+        font: bold;
+        color: white;
+        font-size: 20px;
+    }
+    .news-subtitle {
+        background-color: green;
+        margin: 10px;
+        text-align: center;
+        font: bold;
+        color: white;
+        font-size: 17px;
+    }
+
+    .containerMainNEWS {
+        overflow: hidden; /* or auto, or scroll, depending on your preference */
+        background-color: gold;
+        margin: 0 auto; /* This centers the div horizontally */
+        text-align: center; /* This centers the content inside the div */
+        width: 50%; /* Adjust the width as needed */
+    }
+    .imgMainNEWS {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .gridNEWS {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(200px, auto);
+        gap: 20px;
+    }
+    .news-img {
+        width: 250px;
+        padding: 10px;
+    }
+    .newsDIV-1{
+        background-color: yellow;
+        grid-row: 1;
+        grid-column: 1;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .newsDIV-2{
+        background-color: yellow;
+        grid-row: 1;
+        grid-column: 2;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .newsDIV-3{
+        background-color: yellow;
+        grid-row: 1;
+        grid-column: 3;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .newsDIV-4{
+        background-color: yellow;
+        grid-row: 1;
+        grid-column: 4;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .newsDIV-5{
+        background-color: yellow;
+        grid-row: 2;
+        grid-column: 1;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .newsDIV-6{
+        background-color: yellow;
+        grid-row: 2;
+        grid-column: 2;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .newsDIV-7{
+        background-color: yellow;
+        grid-row: 2;
+        grid-column: 3;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .newsDIV-8{
+        background-color: yellow;
+        grid-row: 2;
+        grid-column: 4;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+/* PROCESO SELECTIVO */
+
+.daysToProcesoTITLE {
+    background-color: green;
+    margin: 10px;
+    text-align: center;
+    font: bold;
+    color: white;
+    font-size: 20px;
 }

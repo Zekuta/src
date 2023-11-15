@@ -7,18 +7,165 @@
         <script type="text/javascript" src="scripts.js"></script>
     </head>
     <body>
-        //Titulo de la pagina
-
-        <div class="containerLOGO">
-            <div class="image">
-                <img src="ifsul_logoREALPNG.png" class="imgLOGO">
+        <!-- Titulo de la pagina -->
+        <div class="containerINICIO">
+            <div class="containerLOGO">
+                <img src="images/ifsul_logoREALPNG.png" class="imgLOGO" alt="logo IFNews">
             </div>
-            <div class="textLOGO">
-                <h1>IFNews</h1>
+            <div class="containerTITLE">
+                <h1 class="title">IFNews</h1>
+            </div>
+            <div class="containerINTERFACE">
+                <button id="btnUSER">
+                    <img class="imgBtnUSER" src="images/user-icon.png" alt="Icono de usuario">
+                </button>
+                <button id="btnMENU">
+                    <img class="imgBtnMENU" src="images/menu-icon.png" alt="Ícono de menú de opciones">
+                </button>
+            </div>
+        </div>
+        
+        <hr /> <!-- lineas que acoplan el menu -->
+            <div class="menu">
+                <ul class="itemsMENU">
+                    <li class="linksMENU"><a href="#">INICIO</a></li>
+                    <li class="linksMENU"><a href="#">BOLETINES</a></li>
+                    <li class="linksMENU"><a href="#">PUBLICACIONES</a></li>
+                    <li class="linksMENU"><a href="#">CATEGORIAS</a></li>
+                    <li class="linksMENU"><a href="#">GALERIA</a></li>
+                    <li class="linksMENU"><a href="#">BLOG ACADÉMICO</a></li>
+                    <li class="linksMENU"><a href="#">CONTACTO</a></li>
+                    <!-- noticias, biblioteca, admisiones, calendario academico, contacto, acerca
+                        de la institucion, boletines. -->
+                </ul>
+            </div>
+        <hr />
+
+        <div class="containerINSTITUTES"> 
+            
+            <div class="columnINSTITUES">
+                <figure>
+                    <a href="https://utec.edu.uy/en/">
+                        <img class="imgINSTITUTES" src="images/utec_logoWHITEBKG.jpg" alt="UTEC logo">
+                    </a>
+                        <figcaption>Universidad Tecnológica del Uruguay</figcaption>
+                </figure>
+            </div>
+        
+            <div class="columnINSTITUES">
+                <figure>
+                    <a href="http://www.ifsul.edu.br/"></a>
+                        <img class="imgINSTITUTES" src="images/ifsul_logoWHITEBKG.png" alt="IFSUL logo">
+                    </a>
+                        <figcaption>IFSul - Instituto Federal Sul - Sant'Ana do Livramento</figcaption>
+                </figure>
+            </div>
+
+            <div class="columnINSTITUES">
+                <figure>
+                    <a href="https://www.utu.edu.uy/"></a>
+                        <img class="imgINSTITUTES" src="images/utu_logoWHITEBKG.jpg" alt="UTU logo">
+                    </a>
+                        <figcaption>Universidad del Trabajo del Uruguay</figcaption>
+                </figure>
+            </div>
+
+        </div>
+
+        <!-- NEWS -->
+
+        <hr class="hr-margin-top" />
+            <h2 class="news-bannerTITLE">NEWS</h2>
+        <hr class="hr-margin-bot" />
+
+
+        <!-- al menos 8 noticias (target -> 9) con un div principal tamanho 500 y el resto 200x200 en grid 4x2 -->
+
+        <div class="containerMainNEWS">
+            <br />
+            <p class="news-title"><a href="#">IFSul realiza prova do Vestibular para cursos superiores neste domingo (19)</a></p>
+            <img class="imgMainNEWS" src="images/news-mainpage/main-news2.jpg" alt="main-news">
+            <p>Locais de prova podem ser encontrados no site do processo seletivo juntamente com as instruções aos candidatos</p>
+            <p class="margin-paragraph">
+                O IFSul realiza neste domingo (19) as provas do Vestibular dos cursos superiores. 
+                A prova terá duração de duas horas (2h), tendo seu início as 9h, os portões fecharão às 8h55min.
+                As provas serão realizadas nas cidades de Bagé, Camaquã, Charqueadas; Gravataí; Lajeado;
+                Passo Fundo, Pelotas, Santana do Livramento e Venâncio Aires.
+            </p>
+            <p class="margin-paragraph">Publicado: Terça, 14 de Novembro de 2023, 14h11</p>
+            <br />
+        </div>
+
+        <h2 class="news-bannerTITLE">Más Noticias</h2>
+
+        <div class="gridNEWS">
+            <div class="newsDIV-1">
+                <p class="news-subtitle"><a href="#">Câmpus Charqueadas abre seleção para professor substituto</a></p>
+                <img class="news-img" src="images/news-mainpage/news1.jpg" alt="...">
+                <p>A vaga é para a área de Controle e Processos Industriais. Inscrições podem ser realizadas até 17 de novembro</p>
+                <p>13/11/23</p>
+            </div>
+            <div class="newsDIV-2">
+                <p class="news-subtitle"><a href="#">Pesquisadores do IFSul são listados em ranking internacional de produtividade científica</a></p>
+                <img class="news-img" src="images/news-mainpage/news2.jpg" alt="...">
+                <p>O IFSul tem 26 pesquisadores listados no AD Scientific Index 2024</p>
+                <p>10/11/23</p>
+            </div>
+            <div class="newsDIV-3">
+                <p class="news-subtitle"><a href="#">Câmpus Charqueadas abre seleção para professor substituto</a></p>
+                <img class="news-img" src="images/news-mainpage/news3.jpg" alt="...">
+                <p>A vaga é para a área de Informação e Comunicação. Inscrições podem ser feitas até 10 de novembro</p>
+                <p>10/11/23</p>
+            </div>
+            <div class="newsDIV-4">
+                <p class="news-subtitle"><a href="#">Câmpus Pelotas abre inscrições para o curso de Formação Pedagógica para graduados não licenciados</a></p>
+                <img class="news-img" src="images/news-mainpage/news4.jpg" alt="...">
+                <p>Pessoas interessadas podem se inscrever até 24 de novembro. São disponibilizadas 30</p>
+                <p>01/11/23</p>
+            </div>
+            <div class="newsDIV-5">
+                <p class="news-subtitle"><a href="#">Projeto A outra margem do rio tem ponto de arrecadação na Feira do Livro de Pelotas</a></p>
+                <img class="news-img" src="images/news-mainpage/news5.jpg" alt="...">
+                <p>IFSul participa da iniciativa que arrecada livros para crianças e jovens do Vale do Taquari</p>
+                <p>01/11/23</p>
+            </div>
+            <div class="newsDIV-6">
+                <p class="news-subtitle">Câmpus Pelotas abre inscrições para seleção de professor substituto<a href="#">...</a></p>
+                <img class="news-img" src="images/news-mainpage/news6.jpg" alt="...">
+                <p>A vaga é para a área de Controle e Processos Industriais. As inscrições podem ser feitas até as 18h de 29 de setembro</p>
+                <p>25/09/23</p>
+            </div>
+            <div class="newsDIV-7">
+                <p class="news-subtitle"><a href="#">IFsul promove seminário sobre Patrimonialização da Lida Campeira em Bagé e na região do Alto Camaquã</a></p>
+                <img class="news-img" src="images/news-mainpage/news7.jpg" alt="...">
+                <p>Evento, voltado para estudantes, contará com exposição de artesanatos, roda de conversa e oficinas; programação ocorrerá entre os dias 28 e 29 de setembro</p>
+                <p>25/09/23</p>
+            </div>
+            <div class="newsDIV-8">
+                <p class="news-subtitle"><a href="#">Os dois câmpus mais antigos do IFSul divulgam programação de aniversário</a></p>
+                <img class="news-img" src="images/news-mainpage/news8.jpg" alt="...">
+                <p>Em outubro, câmpus Pelotas-Visconde da Graça (CaVG) e câmpus Pelotas comemoram 100 e 80 anos, respectivamente; a menos de um mês dos aniversários, unidades intensificam atividades...</p>
+                <p>22/09/23</p>
             </div>
         </div>
 
+        <!-- DEPOIMENTO DE ALUMNOS -->
+
         
+
+        <!-- DIAS PARA PROCESO SELECTIVO -->
+
+        <hr class="hr-margin-top">
+
+            <h3 class="daysToProcesoTITLE">Días para el siguiente proceso selectivo:</h3>
+
+            <div class="daysToProceso"></div>
+
+            <script>
+
+            </script>
+
+        <hr class="hr-margin-bot">
 
     </body>
 </html>
