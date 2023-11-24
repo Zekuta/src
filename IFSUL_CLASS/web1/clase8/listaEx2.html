@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <input type="text" id="texto">
+        <button id="buscar">Buscar</button>
+        <p id="para"></p>
+    </body>
+
+    <script>
+        var palavras = ["exemplo1", "exemplo2", "exemplo3"];
+        palavras.forEach(function(palavra) {
+            console.log(palavra);
+        });
+        document.querySelector("#buscar").addEventListener("click", function(){
+            let texto = document.querySelector("#texto").value;
+            if(palavras.indexOf(texto)>=0) {
+                document.querySelector("#para").innerHTML = "Encontrado";
+            } else {
+                document.querySelector("#para").innerHTML = "No encontrado";
+            }
+        });
+        document.querySelector
+    </script>
+</html>

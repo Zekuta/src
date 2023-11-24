@@ -4,34 +4,64 @@
         <title>IFNews</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css">
-        <script type="text/javascript" src="scripts.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <script type="text/javascript" src="scripts.js"></script> -->
     </head>
     <body>
         <!-- Titulo de la pagina -->
-        <div class="containerINICIO">
-            <div class="containerLOGO">
-                <img src="images/ifsul_logoREALPNG.png" class="imgLOGO" alt="logo IFNews">
-            </div>
-            <div class="containerTITLE">
+        <div class="containerINICIO"> <!-- main container-->  
+            <div class="containerLOGO"> <!--logo container-->
+                <a href="IFNews.html">
+                    <img src="images/ifsul_logoREALPNG.png" class="imgLOGO" alt="logo IFNews">
+                </a>
+            </div> <!--logo container-->
+            <div class="containerTITLE"> <!-- title container-->
                 <h1 class="title">IFNews</h1>
-            </div>
+            </div> <!-- title container-->
             <div class="containerINTERFACE">
-                <button id="btnUSER">
-                    <img class="imgBtnUSER" src="images/user-icon.png" alt="Icono de usuario">
+                <!-- USER BUTTON -->
+                <button id="btnUSER" class="menu-btn">
+                    <a href="#">
+                        <img class="imgBTN" src="images/user-iconWHITE.png" alt="Icono de usuario">
+                    </a>
                 </button>
-                <button id="btnMENU">
-                    <img class="imgBtnMENU" src="images/menu-icon.png" alt="Ícono de menú de opciones">
+                <ul id="submenuUSER" class="submenu">
+                    <li><a href="#">Perfil</a></li>
+                    <li><a href="#">Configuraciones</a></li>
+                    <!-- Add more submenu items as needed -->
+                </ul>
+                </li> <!-- Add this closing tag for the missing </li> -->
+            
+                <!-- MENU BUTTON -->
+                <button id="btnMENU" class="menu-btn">
+                    <a href="#">
+                        <img class="imgBTN" src="images/menu-iconWHITE.png" alt="Icono de Menu">
+                    </a>
                 </button>
-            </div>
-        </div>
+                <ul id="submenuMENU" class="submenu">
+                    <li><a href="#">Tema: Dark | Light</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    <!-- Add more submenu items as needed -->
+                </ul>
+                </li> <!-- Add this closing tag for the missing </li> -->
+            </div> <!-- CONTAINER INTERFACE-->         
+        </div> <!-- main container-->           
         
         <hr /> <!-- lineas que acoplan el menu -->
             <div class="menu">
                 <ul class="itemsMENU">
-                    <li class="linksMENU"><a href="#">INICIO</a></li>
+                    <li class="linksMENU"><a href="IFNews.html">INICIO</a></li>
                     <li class="linksMENU"><a href="#">BOLETINES</a></li>
                     <li class="linksMENU"><a href="#">PUBLICACIONES</a></li>
-                    <li class="linksMENU"><a href="#">CATEGORIAS</a></li>
+                    <li class="linksMENU" onmouseover="showSubmenu()" onmouseout="hideSubmenu()">
+                        <a href="#">CATEGORIAS</a>
+                        <ul class="submenu" id="categoriasSubmenu">
+                            <li><a href="#">Esportes</a></li>
+                            <li><a href="Eventos.html">Eventos</a></li>
+                            <li><a href="#">Institucional</a></li>
+                            <li><a href="#">Premiações</a></li>
+                            <li><a href="#">Envie uma notícia</a></li>
+                        </ul>
                     <li class="linksMENU"><a href="#">GALERIA</a></li>
                     <li class="linksMENU"><a href="#">BLOG ACADÉMICO</a></li>
                     <li class="linksMENU"><a href="#">CONTACTO</a></li>
@@ -40,6 +70,7 @@
                 </ul>
             </div>
         <hr />
+
 
         <div class="containerINSTITUTES"> 
             
@@ -54,7 +85,7 @@
         
             <div class="columnINSTITUES">
                 <figure>
-                    <a href="http://www.ifsul.edu.br/"></a>
+                    <a href="http://www.ifsul.edu.br/">
                         <img class="imgINSTITUTES" src="images/ifsul_logoWHITEBKG.png" alt="IFSUL logo">
                     </a>
                         <figcaption>IFSul - Instituto Federal Sul - Sant'Ana do Livramento</figcaption>
@@ -63,7 +94,7 @@
 
             <div class="columnINSTITUES">
                 <figure>
-                    <a href="https://www.utu.edu.uy/"></a>
+                    <a href="https://www.utu.edu.uy/">
                         <img class="imgINSTITUTES" src="images/utu_logoWHITEBKG.jpg" alt="UTU logo">
                     </a>
                         <figcaption>Universidad del Trabajo del Uruguay</figcaption>
@@ -130,7 +161,7 @@
                 <p>01/11/23</p>
             </div>
             <div class="newsDIV-6">
-                <p class="news-subtitle">Câmpus Pelotas abre inscrições para seleção de professor substituto<a href="#">...</a></p>
+                <p class="news-subtitle"><a href="#">Câmpus Pelotas abre inscrições para seleção de professor substituto</a></p>
                 <img class="news-img" src="images/news-mainpage/news6.jpg" alt="...">
                 <p>A vaga é para a área de Controle e Processos Industriais. As inscrições podem ser feitas até as 18h de 29 de setembro</p>
                 <p>25/09/23</p>
@@ -149,23 +180,50 @@
             </div>
         </div>
 
+
         <!-- DEPOIMENTO DE ALUMNOS -->
 
-        
+        <hr class="hr-margin-top">
+            <h2 class="depoimentosTITLE">Comentarios de estudiantes: </h2>
+        <hr class="hr-margin-bot">
+
+        <div class="depoimentosGRID">
+            <div class="spaceDIV1"></div>
+            <div class="profile-comments-imgDIV">
+                <img class="profile-comments-img" id="comments-profile" src="images/usuarios/user-icon-1.png" alt="Perfil del cliente">
+            </div>  
+            <div class="user-commentsDIV">
+                <p class="user-comments" id="texto">¡Excelente noticia sobre los cursos de "Análisis y Desarrollo en Sistemas"!
+                     Estoy emocionado por la amplitud y profundidad que estos cursos ofrecen. 
+                     La combinación de teoría sólida y aplicaciones prácticas realmente destaca, 
+                     preparándonos de manera integral para los desafíos del mundo real en el desarrollo de sistemas. 
+                     ¡Agradecido por formar parte de este programa educativo innovador y orientado al futuro!</p>
+            </div>
+            <div class="user-usernameDIV">
+                <h2 class="user-username" id="nombre">Zekuta</h2>
+            </div>
+            <div class="circle-selector" id=5"circulos">
+                <span class="circle" onclick="cambiarComentario(0)"></span>
+                <span class="circle" onclick="cambiarComentario(1)"></span>
+                <span class="circle" onclick="cambiarComentario(2)"></span>
+                <span class="circle" onclick="cambiarComentario(3)"></span>
+                <span class="circle" onclick="cambiarComentario(4)"></span>
+            </div>
+            <div class="spaceDIV2"></div>
+        </div>
 
         <!-- DIAS PARA PROCESO SELECTIVO -->
 
         <hr class="hr-margin-top">
-
-            <h3 class="daysToProcesoTITLE">Días para el siguiente proceso selectivo:</h3>
-
-            <div class="daysToProceso"></div>
-
-            <script>
-
-            </script>
-
+            <h2 class="daysToProcesoTITLE">Días para el siguiente proceso selectivo:</h2>
         <hr class="hr-margin-bot">
 
+        <div class="centerProceso">
+            <div class="daysToProceso"></div>
+        </div>
+
+
+        <!-- SCRIPT -->
+        <script type="text/javascript" src="script.js"></script>
     </body>
 </html>

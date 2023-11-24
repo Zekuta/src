@@ -1,0 +1,132 @@
+.submenu {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submenu.visible {
+    display: block;
+  }
+  
+
+  /* CSS CODIGO VIEJO */
+
+  /* INICIO */
+.containerINICIO {
+  display: flex;
+  height: 69px;
+}
+  .containerLOGO {
+      justify-content: flex-start;
+  }
+      .imgLOGO {
+          text-align: left;
+          max-width: 69px;
+          max-height: 69px;
+      }
+
+  .containerTITLE {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 20px;
+      flex-grow: 1; /* Permite que el título ocupe el espacio disponible y se centre horizontalmente */
+  }
+      .title {
+          color: white;
+      }
+      
+  .containerINTERFACE {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+      .btnINTERFACE {
+          background: none;
+          border: none;
+          padding: 3px;
+          margin: 3px;
+      }
+          .imgBTN {
+              max-width: 50px;
+              max-height: 50px;
+          }
+          .submenu {
+              display: none;
+              position: absolute;
+              list-style-type: none;
+              padding: 0;
+              margin: 0;
+              background-color: #fff;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .submenu.visible {
+              display: block;
+            }
+                    
+          
+.menu {
+  flex: 1; /* Allow the menu to grow and take up remaining space */
+  text-align: center; /* Center the menu items horizontally */
+}
+  ul.itemsMENU {
+      padding-inline-start: 0; /* Remove the inline-start padding for the specific list with class "my-list" */
+      margin: 7px;
+  }
+  /* Estilos para los enlaces en la lista */
+  .linksMENU {
+      display: inline-block;
+      padding-bottom: 5px; /* Espacio para el borde debajo del enlace */
+      margin-right: 20px; /* Espacio entre los enlaces (opcional) */
+      position: relative; /* Agregar posición relativa para posicionar el borde */
+  }
+  /* Estilo para el borde inferior en estado normal */
+  .linksMENU::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px; /* Altura del borde inferior */
+      background-color: #ccc; /* Color de borde por defecto */
+      transition: background-color 0.3s; /* Transición suave del color de fondo */
+  }
+  /* Cambiar el color del borde al pasar el mouse sobre un enlace */
+  .linksMENU:hover::after {
+      background-color: gold; /* Cambiar el color del borde al pasar el cursor */
+  }
+  .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      margin: 0px; /* Reset margin */
+      padding: 0px; /* Reset padding */
+      list-style-type: none; /* Remove list-style bullets */
+      /* display: flex; */
+      flex-direction: column;
+      align-items: center; /* Center horizontally */
+  }
+  
+  .submenu li {
+      padding: 10px;
+  }
+  
+  .submenu a {
+      color: #333;
+      text-decoration: none;
+  }
+  
+  .submenu a:hover {
+      color: gold;
+  }

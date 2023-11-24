@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IFNews</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <script type="text/javascript" src="scripts.js"></script> -->
+    </head>
+    <body>
+        <!-- Titulo de la pagina -->
+        <div class="containerINICIO"> <!-- main container-->  
+            <div class="containerLOGO"> <!--logo container-->
+                <a href="IFNews.html">
+                    <img src="images/ifsul_logoREALPNG.png" class="imgLOGO" alt="logo IFNews">
+                </a>
+            </div> <!--logo container-->
+            <div class="containerTITLE"> <!-- title container-->
+                <h1 class="title">IFNews</h1>
+            </div> <!-- title container-->
+            <div class="containerINTERFACE">
+                <!-- USER BUTTON -->
+                <button id="btnUSER" class="menu-btn">
+                    <a href="#">
+                        <img class="imgBTN" src="images/user-iconWHITE.png" alt="Icono de usuario">
+                    </a>
+                </button>
+                <ul id="submenuUSER" class="submenu">
+                    <li><a href="#">Perfil</a></li>
+                    <li><a href="#">Configuraciones</a></li>
+                    <!-- Add more submenu items as needed -->
+                </ul>
+                </li> <!-- Add this closing tag for the missing </li> -->
+            
+                <!-- MENU BUTTON -->
+                <button id="btnMENU" class="menu-btn">
+                    <a href="#">
+                        <img class="imgBTN" src="images/menu-iconWHITE.png" alt="Icono de Menu">
+                    </a>
+                </button>
+                <ul id="submenuMENU" class="submenu">
+                    <li><a href="#">Tema: Dark | Light</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    <!-- Add more submenu items as needed -->
+                </ul>
+                </li> <!-- Add this closing tag for the missing </li> -->
+            </div> <!-- CONTAINER INTERFACE-->         
+        </div> <!-- main container-->           
+        
+        <hr /> <!-- lineas que acoplan el menu -->
+            <div class="menu">
+                <ul class="itemsMENU">
+                    <li class="linksMENU"><a href="#">INICIO</a></li>
+                    <li class="linksMENU"><a href="#">BOLETINES</a></li>
+                    <li class="linksMENU"><a href="#">PUBLICACIONES</a></li>
+                    <li class="linksMENU" onmouseover="showSubmenu()" onmouseout="hideSubmenu()">
+                        <a href="#">CATEGORIAS</a>
+                        <ul class="submenu" id="categoriasSubmenu">
+                            <li><a href="#">Esportes</a></li>
+                            <li><a href="Eventos.html">Eventos</a></li>
+                            <li><a href="#">Institucional</a></li>
+                            <li><a href="#">Premiações</a></li>
+                            <li><a href="#">Envie uma notícia</a></li>
+                        </ul>
+                    <li class="linksMENU"><a href="#">GALERIA</a></li>
+                    <li class="linksMENU"><a href="#">BLOG ACADÉMICO</a></li>
+                    <li class="linksMENU"><a href="#">CONTACTO</a></li>
+                    <!-- noticias, biblioteca, admisiones, calendario academico, contacto, acerca
+                        de la institucion, boletines. -->
+                </ul>
+            </div>
+        <hr />
+
+        <div id="padding-margin" class="gridNEWS">
+            <div class="newsDIV-1">
+                <p class="news-subtitle"><a href="#">IFSul realiza Seminário de Aproximação Mulheres Mil/Ana Terra</a></p>
+                <img class="news-img" src="images/eventos-eventospage/evento1.png" alt="...">
+                <p>Atividades foram realizadas nos dias 7 e 8 de novembro</p>
+                <p>10/11/23</p>
+            </div>
+            <div class="newsDIV-2">
+                <p class="news-subtitle"><a href="Evento2.html">IFSul promove a terceira edição do projeto de extensão Conexão Nugeds: em conversas (des) construtivas</a></p>
+                <img class="news-img" src="images/eventos-eventospage/evento2.jpeg" alt="...">
+                <p>Serão três lives nos dias 6.7 e 9 de novembro. Elas serão transmitidas pelo canal IFSul Transmissões no youtube</p>
+                <p>30/10/23</p>
+            </div>
+            <div class="newsDIV-3">
+                <p class="news-subtitle"><a href="#">Diretoria de Tecnologia da Informação do IFSul realiza fórum com servidores da área</a></p>
+                <img class="news-img" src="images/eventos-eventospage/evento3.jpg" alt="...">
+                <p>A atividade acontece nos dias 26 e 27 de setembro na Sala dos Conselhos da reitoria</p>
+                <p>21/09/23</p>
+            </div>
+            <div class="newsDIV-4">
+                <p class="news-subtitle"><a href="#">IFSul promove 12ª Feira de Ciências do câmpus Camaquã</a></p>
+                <img class="news-img" src="images/eventos-eventospage/evento4.jpg" alt="...">
+                <p>Evento acontecerá entre os dias 9 e 11 de outubro. Submissões de trabalhos podem ser feitas até o dia 18 de setembro</p>
+                <p>06/09/23</p>
+            </div>
+            <div class="newsDIV-5">
+                <p class="news-subtitle"><a href="#">Inscrições abertas para o 7º Encontro dos Saberes Inclusivos do câmpus Camaquã</a></p>
+                <img class="news-img" src="images/eventos-eventospage/evento5.jpg" alt="...">
+                <p>Evento, gratuito, contará com palestras, mesas redondas e oficinas. Programação ocorrerá no dia 26 de setembro</p>
+                <p>30/08/23</p>
+            </div>
+            <div class="newsDIV-6">
+                <p class="news-subtitle"><a href="#">Educação Profissional e Tecnológica será tema de evento interinstitucional</a></p>
+                <img class="news-img" src="images/eventos-eventospage/evento6.jpg" alt="...">
+                <p>O 4º Seminário da Rede Gaúcha de Estudos e Pesquisas sobre EPT e o 4º Seminário ProfEPT IFRS estão com inscrições abertas para submissão de trabalhos até 29 de junho. O IFSul é...</p>
+                <p>19/06/23</p>
+            </div>
+            <div class="newsDIV-7">
+                <p class="news-subtitle"><a href="#">Lançamento do Programa IFSul Inclusivo ocorre nesta sexta-feira</a></p>
+                <img class="news-img" src="images/eventos-eventospage/evento7.jpg" alt="...">
+                <p>A iniciativa contempla um conjunto de ações para fomentar a inclusão na instituição. Lançamento do programa e do seu respectivo espaço virtual no site institucional será nesta...</p>
+                <p>26/05/23</p>
+            </div>
+            <div class="newsDIV-8">
+                <p class="news-subtitle"><a href="#">Inscrições abertas para o 4º Seminário de Fortalecimento do Ensino Médio Integrado</a></p>
+                <img class="news-img" src="images/eventos-eventospage/evento8.jpg" alt="...">
+                <p>Evento, promovido pela Reitoria do IFSul e pelo Sinasefe-IFSul, será nos dias 29 e 30 de maio, no câmpus Sapucaia do Sul</p>
+                <p>23/05/23</p>
+            </div>
+            <div class="newsDIV-9">
+                <p class="news-subtitle"><a href="#">Programa IFSul Inclusivo contará com evento de lançamento</a></p>
+                <img class="news-img" src="images/eventos-eventospage/evento9.jpg" alt="...">
+                <p>A iniciativa contempla um conjunto de ações para fomentar a inclusão na instituição. Lançamento do programa e do seu respectivo espaço virtual no site institucional será no dia 26...</p>
+                <p>19/05/23</p>
+            </div>
+            <div class="newsDIV-10">
+                <p class="news-subtitle"><a href="#">IFSul realiza eventos na área de educação inclusiva em Pelotas</a></p>
+                <img class="news-img" src="images/eventos-eventospage/evento10.jpg" alt="...">
+                <p>Fórum e seminário, promovidos pelo câmpus Pelotas, ocorrem nos dias 16 e 17 de maio, no auditório da unidade. Inscrições são abertas também à comunidade externa</p>
+                <p>11/05/23</p>
+            </div>
+            <div class="newsDIV-11">
+                <p class="news-subtitle"><a href="#">IFSul aplica pesquisa e realiza palestras sobre Bullying e cyberbullying</a></p>
+                <img class="news-img" src="images/eventos-eventospage/evento11.jpg" alt="...">
+                <p>A atividade denominada Viva Feliz: bullying não! Foi desenvolvida nos dias 11 e 12 de abril nas dependências do câmpus Pelotas</p>
+                <p>17/04/23</p>
+            </div>
+            <div class="newsDIV-12">
+                <p class="news-subtitle"><a href="#">Câmpus Pelotas realiza a exposição “Osso - A trajetória nos quadrinhos do artista pelotense Sandro Andrade”</a></p>
+                <img class="news-img" src="images/eventos-eventospage/evento12.jpg" alt="...">
+                <p>O evento acontece nesta sexta-feira, às 15h45min, no saguão do câmpus</p>
+                <p>03/03/23</p>
+            </div>
+        </div>
+
+
+        <!-- SCRIPT -->
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
